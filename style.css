@@ -5,13 +5,17 @@
     list-style: none;
     text-decoration: none;
     color: black;
+    font-family: serif;
 }
 
+/* ===================================================================================== */
+
+
+/* header */
 header {
     width: 90%;
     margin: 0 auto;
-    height: 80px;
-    display: flex;
+    height: 55px;
 }
 
 header img {
@@ -19,32 +23,53 @@ header img {
 }
 
 header ul {
+    margin-left: auto;
     width: 80%;
     display: flex;
-    padding: 15px;
+    padding: 10px;
 }
 
 header li {
     width: 100%;
     text-align: center;
-    line-height: 3;
+    line-height: 2;
+
 }
 
 header a {
     width: 100%;
     display: block;
-    height: 50px;
+    height: 30px;
+    border-left: 1px solid black;
 }
 
 header li:last-child {
-    background-color: rgb(70, 232, 129);
+    background-color: rgb(232, 197, 70);
+    border-radius: 30px;
+    border: 1px solid rgb(232, 197, 70);
+}
+
+header li:last-child:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+header li:last-child a:hover {
+    color: rgb(232, 197, 70);
 }
 
 header li:last-child a {
     color: white;
+    border-left: none;
 }
 
+/* ===================================================================================== */
+
+
+
+
+
 /* section common */
+
 .container {
     overflow: auto;
     scroll-snap-type: y mandatory;
@@ -53,150 +78,351 @@ header li:last-child a {
 
 .area {
     scroll-snap-align: start;
-    padding: 0 15px;
     height: 100vh;
     width: 100%;
+    overflow: hidden;
+
 }
 
-/* section1 */
-.area:nth-child(1) img{
+
+
+
+/* ===================================================================================== */
+
+/* section1   main写真 */
+#section1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(img/bilding.jpg);
+    background-color: rgba(255, 255, 255, 0.6);
     background-size: cover;
-    width: 100%; 
+    background-blend-mode: lighten;
 }
-/* section2 */
-.area>h3 {
+
+
+#section1 h1 {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    font-size: 40px;
+    color: rgb(232, 197, 70);
+    text-shadow: 1px 2px rgb(141, 137, 137);
+}
+
+#section1 h5 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    font-size: 25px;
+    color: rgb(62, 59, 59);
+}
+
+#section1 h2 {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-size: 30px;
+    color: rgb(62, 59, 59);
+}
+
+#section1 a {
+    position: absolute;
+    top: 60%;
+    left: 42%;
+    background-color: rgb(232, 197, 70);
+    border-radius: 30px;
+    color: white;
+    padding: 15px 40px;
+    border: 1px solid rgb(232, 197, 70);
+}
+
+#section1 a:hover {
+    background-color: white;
+    border-radius: 30px;
+    padding: 15px 40px;
+    color: rgb(232, 197, 70);
+    border: 1px solid rgb(232, 197, 70);
+}
+
+#section1 small {
+    position: absolute;
+    top: 68%;
+    left: 38%;
+}
+
+#section1 p:nth-of-type(1) {
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    background-color: white;
+    width: 45%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    animation: backgroundChange 5s infinite;
+    /* 5秒ごとに無限にアニメーション */
+}
+
+#section1 p:nth-of-type(2) {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    background-color: white;
+    width: 45%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+
+    animation: backgroundChange 5s infinite;
+    /* 5秒ごとに無限にアニメーション */
+}
+
+#section1 p>span {
+    color: red;
+    padding: 5px;
+    font-weight: bold
+}
+
+@keyframes backgroundChange {
+    0% {
+        background-color: rgb(232, 197, 70);
+        color: white;
+        border: 3px solid white;
+    }
+
+    25% {
+        background-color: #f0f8ff;
+        color: black;
+        border: 3px solid rgb(54, 48, 48);
+    }
+
+    50% {
+        background-color: rgb(54, 48, 48);
+        color: rgb(232, 197, 70);
+        border: 3px solid rgb(232, 197, 70);
+    }
+
+    75% {
+        background-color: #f0f8ff;
+        color: black;
+        border: 3px solid rgb(54, 48, 48);
+    }
+
+    100% {
+        background-color: rgb(232, 197, 70);
+        color: white;
+        border: 3px solid white;
+    }
+}
+
+
+
+
+/* ===================================================================================== */
+/* section2 　　*/
+/* こんなお悩みはありませんか？ */
+#section2 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/woman.jpg);
+    background-size: cover;
+    background-color: rgba(251, 251, 159, 0.239);
+    background-blend-mode: lighten;
+}
+
+#section2 h3 {
     text-align: center;
     padding: 35px 0;
     font-size: 35px;
 }
 
-.area:nth-child(2) h3 {
-    padding: 16px 0;
-}
-
-.area:nth-child(2) article {
-    border: 1px solid red;
-    width: 50%;
-    padding: 20px;
-    margin: 10px auto;
-    text-align: center;
-}
-
-.area a {
-    background-color: rgb(70, 232, 129);
-    color: white;
-    padding: 8px 15px;
-}
-
-/* section3*/
-
-.qaBoxs {
-    padding: 30px 0;
+#section2 .qaBoxs {
+    padding: 30px 5px;
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
 }
 
-.qaBox {
+#section2 .qaBox {
     background: rgb(19, 70, 201);
-    background: linear-gradient(90deg, rgba(55, 102, 219, 0.844) 10%, rgb(133, 159, 230) 28%, rgb(190, 204, 244) 69%, rgba(206, 195, 246, 1) 100%);
+    background: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
     width: calc((100% - 32px) / 3);
     height: 150px;
     padding: 35px;
+    border: 3px solid rgba(97, 92, 92, 0.737);
 }
 
-.qaBox h4 {
+#section2 .qaBox h4 {
     color: white;
     text-align: center;
+    text-shadow: 1px 2px rgb(141, 137, 137);
     font-size: 29px;
 }
 
-/* section3 */
-.area:nth-child(4) h1 {
+
+/* ===================================================================================== */
+
+
+/* 選ばれる理由 */
+.choice {
+    width: 100%;
+    height: auto;
+    padding: 9px;
+    background: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
+}
+
+.choice h1 {
+    text-align: center;
+    font-size: 24px;
+    padding: 8px;
+}
+
+.explanation {
+    width: 60%;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.explanation p {
+    width: 70%;
+    text-align: center;
+    line-height: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.explanation img {
+    width: 30%;
+}
+
+/* ===================================================================================== */
+
+
+
+/* section3*/
+
+
+#section3 h1 {
     text-align: center;
     padding: 20px 0;
 }
-.area:nth-child(5) h2 {
+
+#section3 h2 {
     text-align: center;
     background: rgb(19, 70, 201);
     background: linear-gradient(90deg, rgba(55, 102, 219, 0.844) 10%, rgb(133, 159, 230) 28%, rgb(190, 204, 244) 69%, rgba(206, 195, 246, 1) 100%);
     padding: 20px 0;
-    
+
 }
-.area:nth-child(4) p {
+
+#section3 p {
     text-align: center;
     width: 70%;
     line-height: 2.2;
-    margin: 0 auto;
+    margin: 0 auto 10px;
 }
-.area:nth-child(4) ul {
+
+
+#section3 ul {
     text-align: center;
     width: 70%;
-    margin: 50px auto 100px;
+    margin: 0px auto 34px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    li{
-        width:calc((100% - 16px) / 3);
-        background: rgb(19, 70, 201);
-        background: linear-gradient(90deg, rgba(55, 102, 219, 0.844) 10%, rgb(133, 159, 230) 28%, rgb(190, 204, 244) 69%, rgba(206, 195, 246, 1) 100%);
+
+    li {
+        width: calc((100% - 16px) / 3);
+        background: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
         color: white;
+        text-shadow: 1px 2px rgb(92, 87, 87);
         padding: 20px 0;
-        font-size: 20px;
+        font-size: 19px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
-.school-1{
-    text-align: center;
+
+/* ===================================================================================== */
+
+
+
+/* section3*/
+.school {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    height: 100vh;
+    background-image: url(img/pg.jpg);
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.814);
+    background-blend-mode: lighten;
 
 }
-.scool{
-    width: calc((100% - 16px) / 2);
-    border:  1px solid ;
-    padding: 20px;
-}
 
-/* section3 */
-
-.school-2 h2{
+.school h2 {
     text-align: center;
     padding: 20px 0;
 }
-.school-2 ul {
+
+.school ul {
     text-align: center;
-    width: 100%;
-    li{
-        width: 40%;
-        margin: 0 auto;
+    width: 90%;
+    padding: 15px;
+
+    li {
+        width: 70%;
+        display: flex;
         text-align: left;
-        padding: 10px 0;
+        align-items: center;
+        margin: 0 auto;
+        padding: 14px 0;
     }
 }
 
-.school-2-inner{
+.school-inner {
     display: flex;
+    line-height: 1.9;
     width: 100%;
     text-align: center;
 }
-.school-2-inner1{
+
+.school-inner1 {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 5px;
+
+}
+
+.school-inner2 {
     width: 50%;
     padding: 10px;
     border: 1px solid black;
     margin: 5px;
 }
-.school-2-inner2{
-    width: 50%;
-    padding: 10px;
-    border: 1px solid black;
-    margin: 5px;
-}
+
+
+/* ===================================================================================== */
 
 
 
-/* section4 */
+/* sectio3/4*/
+/* Q&A */
 .qa {
     width: 80%;
     margin: 0 auto;
@@ -205,6 +431,12 @@ header li:last-child a {
 
 .qa-inner {
     margin-top: 20px;
+}
+
+#qa h3 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
 }
 
 .inner-1 dl {
@@ -247,6 +479,13 @@ header li:last-child a {
     display: block;
 }
 
+
+
+
+
+/* ===================================================================================== */
+
+
 /* section4 */
 /* 全体レイアウト */
 .wrapper-center {
@@ -260,7 +499,7 @@ header li:last-child a {
     background-color: #f7f7f7;
 }
 
-/* top-2セクションのレイアウト */
+/* top-2セクションのレイアウト  */
 .top-2 {
     display: flex;
     flex-wrap: wrap;
@@ -269,8 +508,9 @@ header li:last-child a {
     width: 100%;
 }
 
-/* top-2-inner: セクションラップ */
-.top-2-inner, .top-2-inner-2 {
+/* top-2-inner: セクションラップ  */
+.top-2-inner,
+.top-2-inner-2 {
     flex: 1;
     background-color: #fff;
     padding: 20px;
@@ -278,20 +518,20 @@ header li:last-child a {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* 各セクションのスタイル */
+/* 各セクションのスタイル  */
 .section {
     margin-bottom: 30px;
 }
 
 .section h1 {
     font-size: 2.2rem;
-    color: #2c3e50;
+    color: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
     margin-bottom: 10px;
 }
 
 .section h2 {
     font-size: 1.8rem;
-    color: #3498db;
+    color: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
     margin-bottom: 15px;
 }
 
@@ -301,7 +541,7 @@ header li:last-child a {
     color: #555;
 }
 
-/* 会社概要リストのスタイル */
+/* 会社概要リストのスタイル  */
 .list-all {
     margin-top: 20px;
 }
@@ -318,17 +558,17 @@ header li:last-child a {
 }
 
 .list-all a {
-    color:white;
-     background: rgb(19, 70, 201);
-    background: linear-gradient(90deg, rgba(55, 102, 219, 0.844) 10%, rgb(133, 159, 230) 28%, rgb(190, 204, 244) 69%, rgba(206, 195, 246, 1) 100%);
+    color: white;
     text-decoration: none;
+    padding: 10px 25px;
+    background: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
 }
 
 .list-all a:hover {
     text-decoration: underline;
 }
 
-/* Google Map のスタイル */
+/* Google Map のスタイル  */
 .top-2-inner-2 iframe {
     border: none;
     width: 100%;
@@ -336,14 +576,25 @@ header li:last-child a {
     border-radius: 10px;
 }
 
-/* レスポンシブデザイン */
-@media (max-width: 768px) {
-    .top-2 {
-        flex-direction: column;
-    }
 
-    .top-2-inner, .top-2-inner-2 {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-}
+
+/* ===================================================================================== */
+/* JS　API */
+.animate {
+    opacity: 0;
+    transition:opacity 2.4s,transform 3s;
+  }
+  
+  .animate.sl {
+    transform: translateX(-600px);
+  }
+  
+  .animate.sr {
+    transform: translateX(400px);
+  }
+  
+  
+  .animate.appear {
+    opacity: 1;
+    transform: none;
+  }
