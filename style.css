@@ -13,13 +13,18 @@
 
 /* header */
 header {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     height: 55px;
+    display: flex;
 }
 
-header img {
+header h6 {
     width: 20%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header ul {
@@ -582,19 +587,77 @@ header li:last-child a {
 /* JS　API */
 .animate {
     opacity: 0;
-    transition:opacity 2.4s,transform 3s;
-  }
-  
-  .animate.sl {
+    transition: opacity 2.4s, transform 3s;
+}
+
+.animate.sl {
     transform: translateX(-600px);
-  }
-  
-  .animate.sr {
+}
+
+.animate.sr {
     transform: translateX(400px);
-  }
-  
-  
-  .animate.appear {
+}
+
+
+.animate.appear {
     opacity: 1;
     transform: none;
-  }
+}
+
+/* ===================================================================================== */
+
+
+/* footer */
+footer {
+
+    border-top: 1px solid;
+    width: 100%;
+    margin: 30px auto 0;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+footer img {
+    width: 20%;
+}
+
+footer ul {
+    margin-left: auto;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+
+}
+
+footer li {
+    width: 100%;
+    text-align: center;
+    line-height: 2;
+
+}
+
+footer a {
+    width: 100%;
+    display: block;
+    height: 30px;
+    border-left: 1px solid black;
+}
+
+footer li:last-child {
+    background-color: rgb(232, 197, 70);
+    border-radius: 30px;
+    border: 1px solid rgb(232, 197, 70);
+}
+
+footer li:last-child:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+footer li:last-child a:hover {
+    color: rgb(232, 197, 70);
+}
+
+footer li:last-child a {
+    color: white;
+    border-left: none;
+}
