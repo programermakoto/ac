@@ -1,105 +1,1266 @@
-/* 全体レイアウト */
-body {
-    font-family: 'Arial', sans-serif;
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background-color: #f7f7f7;
-    color: #333;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-family: serif;
 }
 
+/* ===================================================================================== */
+
+
+/* header */
 header {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 55px;
+    display: flex;
 }
 
-header img {
-    width: 80px;
-    height: auto;
-    margin-bottom: 10px;
+header h6 {
+    width: 20%;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+    margin-left: auto;
+    width: 80%;
+    display: flex;
+    padding: 10px;
+}
+
+header li {
+    width: 100%;
+    text-align: center;
+    line-height: 2;
+
+}
+
+header a {
+    width: 100%;
+    display: block;
+    height: 30px;
+    border-left: 1px solid black;
+}
+
+header li:last-child {
+    background-color: rgb(232, 197, 70);
+    border-radius: 30px;
+    border: 1px solid rgb(232, 197, 70);
+}
+
+header li:last-child:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+header li:last-child a:hover {
+    color: rgb(232, 197, 70);
+}
+
+header li:last-child a {
+    color: white;
+    border-left: none;
+}
+
+/* ===================================================================================== */
+
+
+
+
+
+/* section common */
+
+.container {
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+}
+
+.area {
+    scroll-snap-align: start;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+
+
+
+/* ===================================================================================== */
+
+/* section1   main写真 */
+#section1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background-image: url(img/bilding.jpg);
+    background-color: rgba(255, 255, 255, 0.6);
+    background-size: cover;
+    background-blend-mode: lighten;
+}
+
+
+#section1 h1 {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    font-size: 40px;
+    color: rgb(232, 197, 70);
+    text-shadow: 1px 2px rgb(141, 137, 137);
+}
+
+#section1 h5 {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    font-size: 25px;
+    color: rgb(62, 59, 59);
+}
+
+#section1 h2 {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    font-size: 30px;
+    color: rgb(62, 59, 59);
+}
+
+#section1 a {
+    position: absolute;
+    top: 60%;
+    left: 42%;
+    background-color: rgb(232, 197, 70);
+    border-radius: 30px;
+    color: white;
+    padding: 15px 40px;
+    border: 1px solid rgb(232, 197, 70);
+}
+
+#section1 a:hover {
+    background-color: white;
+    border-radius: 30px;
+    padding: 15px 40px;
+    color: rgb(232, 197, 70);
+    border: 1px solid rgb(232, 197, 70);
+}
+
+#section1 small {
+    position: absolute;
+    top: 68%;
+    left: 38%;
+}
+
+#section1 p:nth-of-type(1) {
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    background-color: white;
+    width: 45%;
+    margin: 10px;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+    animation: backgroundChange 5s infinite;
+    /* 5秒ごとに無限にアニメーション */
 }
 
-header ul li {
-    display: inline;
+#section1 p:nth-of-type(2) {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    background-color: white;
+    width: 45%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    text-align: center;
+    font-size: 30px;
+
+    animation: backgroundChange 5s infinite;
+    /* 5秒ごとに無限にアニメーション */
 }
 
-header ul li a {
+#section1 p>span {
+    color: red;
+    padding: 5px;
+    font-weight: bold
+}
+
+@keyframes backgroundChange {
+    0% {
+        background-color: rgb(232, 197, 70);
+        color: white;
+        border: 3px solid white;
+    }
+
+    25% {
+        background-color: #f0f8ff;
+        color: black;
+        border: 3px solid rgb(54, 48, 48);
+    }
+
+    50% {
+        background-color: rgb(54, 48, 48);
+        color: rgb(232, 197, 70);
+        border: 3px solid rgb(232, 197, 70);
+    }
+
+    75% {
+        background-color: #f0f8ff;
+        color: black;
+        border: 3px solid rgb(54, 48, 48);
+    }
+
+    100% {
+        background-color: rgb(232, 197, 70);
+        color: white;
+        border: 3px solid white;
+    }
+}
+
+
+
+
+/* ===================================================================================== */
+/* section2 　　*/
+/* こんなお悩みはありませんか？ */
+#section2 {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/woman.jpg);
+    background-size: cover;
+    background-color: rgba(251, 251, 159, 0.239);
+    background-blend-mode: lighten;
+}
+
+#section2 h3 {
+    text-align: center;
+    padding: 35px 0;
+    font-size: 35px;
+}
+
+#section2 .qaBoxs {
+    padding: 30px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+#section2 .qaBox {
+    background: rgb(19, 70, 201);
+    background: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
+    width: calc((100% - 32px) / 3);
+    height: 150px;
+    padding: 35px;
+    border: 3px solid rgba(97, 92, 92, 0.737);
+}
+
+#section2 .qaBox h4 {
     color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
+    text-align: center;
+    text-shadow: 1px 2px rgb(141, 137, 137);
+    font-size: 29px;
 }
 
-header ul li a:hover {
-    text-decoration: underline;
+
+/* ===================================================================================== */
+
+
+/* 選ばれる理由 */
+.choice {
+    width: 100%;
+    height: auto;
+    padding: 9px;
+    background: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
 }
 
-/* メインコンテンツのスタイル */
-main {
-    padding: 20px;
-    background-color: #fff;
-    margin: 20px auto;
-    max-width: 1200px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.choice h1 {
+    text-align: center;
+    font-size: 24px;
+    padding: 8px;
 }
 
-.wrapper-top {
+.explanation {
+    width: 60%;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.explanation p {
+    width: 70%;
+    text-align: center;
+    line-height: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    padding: 10px;
+}
+
+.explanation img {
+    width: 30%;
+}
+
+/* ===================================================================================== */
+
+
+
+/* section3*/
+
+
+#section3 h1 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+#section3 h2 {
+    text-align: center;
+    background: rgb(19, 70, 201);
+    background: linear-gradient(90deg, rgba(55, 102, 219, 0.844) 10%, rgb(133, 159, 230) 28%, rgb(190, 204, 244) 69%, rgba(206, 195, 246, 1) 100%);
+    padding: 20px 0;
+
+}
+
+#section3 p {
+    text-align: center;
+    width: 70%;
+    line-height: 2.2;
+    margin: 0 auto 10px;
+}
+
+
+#section3 ul {
+    text-align: center;
+    width: 70%;
+    margin: 0px auto 34px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    li {
+        width: calc((100% - 16px) / 3);
+        background: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
+        color: white;
+        text-shadow: 1px 2px rgb(92, 87, 87);
+        padding: 20px 0;
+        font-size: 19px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* ===================================================================================== */
+
+
+
+/* section3*/
+.school {
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/pg.jpg);
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.814);
+    background-blend-mode: lighten;
+
+}
+
+.school h2 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.school ul {
+    text-align: center;
+    width: 90%;
+    padding: 15px;
+
+    li {
+        width: 70%;
+        display: flex;
+        text-align: left;
+        align-items: center;
+        margin: 0 auto;
+        padding: 14px 0;
+    }
+}
+
+.school-inner {
+    display: flex;
+    line-height: 1.9;
+    width: 100%;
     text-align: center;
 }
 
-.wrapper-top h1 {
-    font-size: 2rem;
-    color: #2c3e50;
-    margin-bottom: 20px;
+.school-inner1 {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 5px;
+
 }
 
-.wrapper-top-inner {
-    padding: 20px;
-    text-align: left;
+.school-inner2 {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 5px;
 }
 
-.wrapper-top-inner p {
-    margin-bottom: 15px;
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.8;
+
+/* ===================================================================================== */
+
+
+
+/* sectio3/4*/
+/* Q&A */
+.qa {
+    width: 80%;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
 }
 
-.wrapper-top-inner h3 {
-    font-size: 1.2rem;
-    margin-top: 30px;
-    color: #2c3e50;
-}
-
-/* 水平線 */
-hr {
+.qa-inner {
     margin-top: 20px;
-    border: 0;
-    border-top: 1px solid #ddd;
 }
 
-/* レスポンシブデザイン */
-@media (max-width: 768px) {
-    header ul {
+#qa h3 {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+.inner-1 dl {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.inner-1 dt {
+    background-color: #f7f7f7;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+}
+
+.inner-1 dt::after {
+    content: '+';
+    font-size: 18px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease;
+}
+
+.inner-1 dt.active::after {
+    content: '-';
+}
+
+.inner-1 dd {
+    padding: 15px;
+    background-color: #fff;
+    display: none;
+    border-top: 1px solid #ccc;
+}
+
+.inner-1 dd.show {
+    display: block;
+}
+
+
+
+
+
+/* ===================================================================================== */
+
+
+/* section4 */
+/* 全体レイアウト */
+.wrapper-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #f7f7f7;
+}
+
+/* top-2セクションのレイアウト  */
+.top-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+/* top-2-inner: セクションラップ  */
+.top-2-inner,
+.top-2-inner-2 {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 各セクションのスタイル  */
+.section {
+    margin-bottom: 30px;
+}
+
+.section h1 {
+    font-size: 2.2rem;
+    color: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
+    margin-bottom: 10px;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    color: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
+    margin-bottom: 15px;
+}
+
+.section p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* 会社概要リストのスタイル  */
+.list-all {
+    margin-top: 20px;
+}
+
+.list-all dl {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.list-all dd {
+    margin-left: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+.list-all a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    background: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
+}
+
+.list-all a:hover {
+    text-decoration: underline;
+}
+
+/* Google Map のスタイル  */
+.top-2-inner-2 iframe {
+    border: none;
+    width: 100%;
+    height: 700px;
+    border-radius: 10px;
+}
+
+
+
+/* ===================================================================================== */
+/* JS　API */
+.animate {
+    opacity: 0;
+    transition: opacity 2.4s, transform 3s;
+}
+
+.animate.sl {
+    transform: translateX(-600px);
+}
+
+.animate.sr {
+    transform: translateX(400px);
+}
+
+
+.animate.appear {
+    opacity: 1;
+    transform: none;
+}
+
+/* ===================================================================================== */
+
+
+/* footer */
+footer {
+
+    border-top: 1px solid;
+    width: 100%;
+    margin: 30px auto 0;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+footer img {
+    width: 20%;
+}
+
+footer ul {
+    margin-left: auto;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+
+}
+
+footer li {
+    width: 100%;
+    text-align: center;
+    line-height: 2;
+
+}
+
+footer a {
+    width: 100%;
+    display: block;
+    height: 30px;
+    border-left: 1px solid black;
+}
+
+footer li:last-child {
+    background-color: rgb(232, 197, 70);
+    border-radius: 30px;
+    border: 1px solid rgb(232, 197, 70);
+}
+
+footer li:last-child:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+footer li:last-child a:hover {
+    color: rgb(232, 197, 70);
+}
+
+footer li:last-child a {
+    color: white;
+    border-left: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1435px以下 */
+@media(min-width:1200px) and (max-width:1435px) {
+    #section2 .qaBox {
+        height: 180px;
+    }
+
+
+
+    .choice {
+        height: 285px;
+    }
+
+    .explanation {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+
+
+    #section3 p {
+        width: 100%;
+        line-height: 2;
+        margin: 0 auto 40px;
+    }
+
+
+
+    .school ul {
+        width: 80%;
+        padding: 15px;
+        margin: 0 auto;
+
+        li {
+            width: 100%;
+            margin: 0 auto;
+            padding: 14px 0;
+        }
+    }
+}
+
+/* 1199px以下 */
+@media(min-width:1000px) and (max-width:1199px) {
+    header h6 {
+        font-size: 15px;
+    }
+
+    header li:last-child a {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #section1 h1 {
+        left: 8%;
+        font-size: 35px;
+    }
+
+    #section1 h5 {
+        left: 25%;
+        font-size: 25px;
+    }
+
+    #section1 h2 {
+        left: 25%;
+    }
+
+    #section1 small {
+        position: absolute;
+        top: 73%;
+        left: 35%;
+    }
+
+    #section1 p:nth-of-type(1) {
+        bottom: 5px;
+    }
+
+    #section1 p:nth-of-type(2) {
+        bottom: 5px;
+    }
+
+
+    #section2 .qaBox {
+        width: calc((100% - 16px) / 2);
+        height: auto;
+        padding: 10px;
+        border: 3px solid rgba(97, 92, 92, 0.737);
+    }
+
+    #section2 .qaBox h4 {
+        font-size: 26px;
+    }
+
+
+
+
+
+
+
+
+    /* 選ばれる理由 */
+    .choice h1 {
+        font-size: 20px;
+    }
+
+    .explanation {
+        width: 80%;
+    }
+
+    .explanation p {
+        width: 100%;
+        text-align: center;
+        line-height: 1.4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        padding: 5px;
+    }
+
+    .explanation img {
+        width: 30%;
+    }
+
+
+
+
+
+    #section3 h1 {
+        padding: 10px 0;
+    }
+
+    #section3 h2 {
+        padding: 10px 0;
+
+    }
+
+    #section3 p {
+        text-align: center;
+        width: 100%;
+        line-height: 1.8;
+        margin: 0 auto 10px;
+    }
+
+
+    #section3 ul {
+        width: 100;
+
+        li {
+            width: calc((100% - 16px) / 3);
+            background: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
+            color: white;
+            text-shadow: 1px 2px rgb(92, 87, 87);
+            padding: 10px 0;
+            font-size: 19px;
+        }
+    }
+
+
+
+
+
+
+    .school ul {
+        text-align: center;
+        width: 90%;
+        padding: 15px;
+
+        li {
+            width: 100%;
+            padding: 9px 0;
+        }
+    }
+
+    .school-inner {
+        line-height: 1;
+    }
+
+    .school-inner1 {
+        width: 50%;
+        padding: 10px;
+        border: 1px solid black;
+        margin: 5px;
+
+    }
+
+    .school-inner2 {
+        width: 50%;
+        padding: 10px;
+        border: 1px solid black;
+        margin: 5px;
+    }
+
+}
+
+
+
+
+/* 400px以下 */
+@media(min-width:380px) and (max-width:400px) {
+
+    /* header */
+    header {
         flex-direction: column;
-        gap: 10px;
+        height: 80px;
     }
 
-    .wrapper-top-inner p {
-        font-size: 0.9rem;
+    header h6 {
+        width: 100%;
     }
 
-    .wrapper-top h1 {
-        font-size: 1.5rem;
+    header ul {
+        width: 100%;
     }
+
+    header li {
+        width: 100%;
+        line-height: 2.6;
+    }
+
+    header a {
+        font-size: 10px;
+    }
+
+    header a {
+        font-size: 10px;
+    }
+
+    header li:last-child a {
+        font-size: 6px;
+        line-height: 4.7;
+    }
+
+
+    #section1 h2 {
+        position: absolute;
+        top: 5%;
+        left: 5%;
+        font-size: 20px;
+        color: rgb(62, 59, 59);
+    }
+
+    #section1 h1 {
+        position: absolute;
+        top: 15%;
+        left: 3%;
+        font-size: 15px;
+    }
+
+    #section1 h5 {
+        position: absolute;
+        top: 25%;
+        left: 7%;
+        font-size: 15px;
+        color: rgb(62, 59, 59);
+    }
+
+    #section1 a {
+        position: absolute;
+        top: 40%;
+        left: 21%;
+        background-color: rgb(232, 197, 70);
+        border-radius: 30px;
+        color: white;
+        padding: 15px 40px;
+        border: 1px solid rgb(232, 197, 70);
+    }
+
+    #section1 small {
+        position: absolute;
+        top: 50%;
+        left: 5%;
+    }
+
+    #section1 p:nth-of-type(1) {
+        position: absolute;
+        bottom: 60px;
+        left: 8px;
+        background-color: white;
+        width: 45%;
+        margin: 10px;
+        font-size: 8px;
+        /* 5秒ごとに無限にアニメーション */
+    }
+
+    #section1 p:nth-of-type(2) {
+        position: absolute;
+        bottom: 60px;
+        right: 8px;
+        background-color: white;
+        width: 45%;
+        font-size: 10px;
+        animation: backgroundChange 5s infinite;
+        /* 5秒ごとに無限にアニメーション */
+    }
+
+
+
+
+
+
+
+
+    #section2 h3 {
+        padding: 5px;
+        font-size: 20px;
+    }
+
+    #section2 .qaBoxs {
+        padding: 10px 5px;
+        gap: 8px;
+    }
+
+    #section2 .qaBox {
+        background: rgb(19, 70, 201);
+        background: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
+        width: 100%;
+        height: auto;
+        padding: 5px 10px;
+        border: 3px solid rgba(97, 92, 92, 0.737);
+    }
+
+    #section2 .qaBox h4 {
+        color: white;
+        text-shadow: none;
+        text-align: center;
+        font-size: 13px;
+    }
+
+
+
+
+
+
+
+    /* 選ばれる理由 */
+    .choice h1 {
+        font-size: 15px;
+        padding: 0px;
+    }
+    .choice.animate{
+        transform: none;
+        opacity: 1;
+    }
+    .explanation {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .explanation p {
+        width: 100%;
+        text-align: center;
+        line-height: 1.2;
+        font-size: 8px;
+        padding: 10px;
+        background-size: cover;
+    }
+
+    .explanation img {
+        width: 100%;
+        height: 100px;
+    }
+
+
+
+
+
+
+    /* section3*/
+
+
+    #section3 h1 {
+        font-size: 15px;
+        padding: 10px 0;
+    }
+
+
+    #section3 p {
+
+        width: 100%;
+        line-height: 1.3;
+        padding: 5px;
+        font-size: 10px;
+
+    }
+
+
+    #section3 ul {
+        text-align: center;
+        width: 100%;
+        margin: 0px auto 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+
+        li {
+            width: calc((100% - 8px) / 2);
+            background: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
+            color: white;
+            text-shadow: 1px 2px rgb(92, 87, 87);
+            padding: 10px 0;
+            font-size: 10px;
+            height: 40px;
+
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    .school h2 {
+        padding: 10px 0;
+    }
+
+    .school ul {
+        text-align: center;
+        width: 100%;
+        padding: 5px;
+
+        li {
+            width: 100%;
+            font-size: 10px;
+            padding: 0;
+            display: block;
+        }
+    }
+
+
+
+    .school-inner1 {
+        width: 50%;
+        padding: 10px;
+        border: 1px solid black;
+        margin: 5px;
+
+    }
+
+    .school-inner2 {
+        width: 50%;
+        padding: 10px;
+        border: 1px solid black;
+        margin: 5px;
+        font-size: 20px
+    }
+
+    .school h2 {
+        font-size: 10px;
+    }
+
+    .school-inner1 p {
+        font-size: 10px;
+    }
+
+    .school-inner2 p {
+        font-size: 10px;
+    }
+
+
+
+
+
+/* Q&A */
+.qa {
+    width: 90%;
+}
+
+.qa-inner {
+    margin-top: 10px;
+}
+
+#qa h3 {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.inner-1 dl {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.inner-1 dt {
+    background-color: #f7f7f7;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    font-size: 7px;
+}
+
+
+.inner-1 dt::after {
+    content: '+';
+    font-size: 10px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease;
+}
+
+.inner-1 dt.active::after {
+    content: '-';
+}
+
+.inner-1 dd {
+    padding: 15px;
+    background-color: #fff;
+    display: none;
+    border-top: 1px solid #ccc;
+    font-size: 7px;
+}
+
+.inner-1 dd.show {
+    display: block;
+}
+
+/* footer */
+footer {
+
+    border-top: 1px solid;
+    width: 100%;
+    margin: 30px auto 0;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+footer img {
+    width: 20%;
+}
+
+footer ul {
+    margin-left: auto;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+
+}
+
+footer li {
+    width: 100%;
+    text-align: center;
+    line-height: 3;
+    font-size: 10px;
+
+}
+
+footer a {
+    font-size: 6px;
+    line-height: 5;
+}
+
+
+
+
+
+
 }

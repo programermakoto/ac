@@ -902,7 +902,7 @@ footer li:last-child a {
     /* header */
     header {
         flex-direction: column;
-        height: 100px;
+        height: 80px;
     }
 
     header h6 {
@@ -915,41 +915,49 @@ footer li:last-child a {
 
     header li {
         width: 100%;
-        line-height: 1;
-
+        line-height: 2.6;
     }
 
+    header a {
+        font-size: 10px;
+    }
 
+    header a {
+        font-size: 10px;
+    }
 
-
+    header li:last-child a {
+        font-size: 6px;
+        line-height: 4.7;
+    }
 
 
     #section1 h2 {
         position: absolute;
         top: 5%;
         left: 5%;
-        font-size: 25px;
+        font-size: 20px;
         color: rgb(62, 59, 59);
     }
 
     #section1 h1 {
         position: absolute;
-        top: 20%;
-        left: 0%;
-        font-size: 25px;
+        top: 15%;
+        left: 3%;
+        font-size: 15px;
     }
 
     #section1 h5 {
         position: absolute;
-        top: 35%;
-        left: 8%;
-        font-size: 25px;
+        top: 25%;
+        left: 7%;
+        font-size: 15px;
         color: rgb(62, 59, 59);
     }
 
     #section1 a {
         position: absolute;
-        top: 50%;
+        top: 40%;
         left: 21%;
         background-color: rgb(232, 197, 70);
         border-radius: 30px;
@@ -960,41 +968,28 @@ footer li:last-child a {
 
     #section1 small {
         position: absolute;
-        top: 60%;
-        left: 10%;
+        top: 50%;
+        left: 5%;
     }
 
     #section1 p:nth-of-type(1) {
         position: absolute;
-        bottom: 50px;
-        left: 10px;
+        bottom: 60px;
+        left: 8px;
         background-color: white;
         width: 45%;
         margin: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100px;
-        text-align: center;
-        font-size: 15px;
-        animation: backgroundChange 5s infinite;
+        font-size: 8px;
         /* 5秒ごとに無限にアニメーション */
     }
 
     #section1 p:nth-of-type(2) {
         position: absolute;
-        bottom: 50px;
-        right: 10px;
+        bottom: 60px;
+        right: 8px;
         background-color: white;
         width: 45%;
-        margin: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100px;
-        text-align: center;
-        font-size: 15px;
-
+        font-size: 10px;
         animation: backgroundChange 5s infinite;
         /* 5秒ごとに無限にアニメーション */
     }
@@ -1007,15 +1002,13 @@ footer li:last-child a {
 
 
     #section2 h3 {
-
-        font-size: 25px;
+        padding: 5px;
+        font-size: 20px;
     }
 
     #section2 .qaBoxs {
         padding: 10px 5px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
+        gap: 8px;
     }
 
     #section2 .qaBox {
@@ -1029,9 +1022,9 @@ footer li:last-child a {
 
     #section2 .qaBox h4 {
         color: white;
+        text-shadow: none;
         text-align: center;
-        text-shadow: 1px 2px rgb(141, 137, 137);
-        font-size: 15px;
+        font-size: 13px;
     }
 
 
@@ -1042,10 +1035,13 @@ footer li:last-child a {
 
     /* 選ばれる理由 */
     .choice h1 {
-        font-size: 20px;
-        padding: 8px;
+        font-size: 15px;
+        padding: 0px;
     }
-
+    .choice.animate{
+        transform: none;
+        opacity: 1;
+    }
     .explanation {
         width: 100%;
         flex-direction: column;
@@ -1054,11 +1050,8 @@ footer li:last-child a {
     .explanation p {
         width: 100%;
         text-align: center;
-        line-height: 1.5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 13px;
+        line-height: 1.2;
+        font-size: 8px;
         padding: 10px;
         background-size: cover;
     }
@@ -1105,9 +1098,9 @@ footer li:last-child a {
             background: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
             color: white;
             text-shadow: 1px 2px rgb(92, 87, 87);
-            padding: 20px 0;
+            padding: 10px 0;
             font-size: 10px;
-            height: 50px;
+            height: 40px;
 
         }
     }
@@ -1132,8 +1125,9 @@ footer li:last-child a {
 
         li {
             width: 100%;
-            line-height: 1;
-            font-size: 8px;
+            font-size: 10px;
+            padding: 0;
+            display: block;
         }
     }
 
@@ -1158,10 +1152,12 @@ footer li:last-child a {
     .school h2 {
         font-size: 10px;
     }
-    .school-inner1 p{
+
+    .school-inner1 p {
         font-size: 10px;
     }
-    .school-inner2 p{
+
+    .school-inner2 p {
         font-size: 10px;
     }
 
@@ -1169,7 +1165,188 @@ footer li:last-child a {
 
 
 
+/* Q&A */
+.qa {
+    width: 90%;
+}
 
+.qa-inner {
+    margin-top: 10px;
+}
+
+#qa h3 {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+}
+
+.inner-1 dl {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.inner-1 dt {
+    background-color: #f7f7f7;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    font-size: 7px;
+}
+
+
+.inner-1 dt::after {
+    content: '+';
+    font-size: 10px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease;
+}
+
+.inner-1 dt.active::after {
+    content: '-';
+}
+
+.inner-1 dd {
+    padding: 15px;
+    background-color: #fff;
+    display: none;
+    border-top: 1px solid #ccc;
+    font-size: 7px;
+}
+
+.inner-1 dd.show {
+    display: block;
+}
+
+/* footer */
+footer {
+
+    border-top: 1px solid;
+    width: 100%;
+    margin: 30px auto 0;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+}
+
+footer img {
+    width: 20%;
+}
+
+footer ul {
+    margin-left: auto;
+    width: 100%;
+    display: flex;
+    padding: 10px;
+
+}
+
+footer li {
+    width: 100%;
+    text-align: center;
+    line-height: 3;
+    font-size: 10px;
+
+}
+
+footer a {
+    font-size: 6px;
+    line-height: 5;
+}
+
+
+
+
+/* section4 */
+/* 全体レイアウト */
+.wrapper-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    background-color: #f7f7f7;
+}
+
+/* top-2セクションのレイアウト  */
+.top-2 {
+flex-direction: column;
+}
+
+/* top-2-inner: セクションラップ  */
+.top-2-inner,
+.top-2-inner-2 {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 各セクションのスタイル  */
+.section {
+    margin-bottom: 30px;
+}
+
+.section h1 {
+    font-size: 1rem;
+    color: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
+    margin-bottom: 10px;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    color: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
+    margin-bottom: 15px;
+}
+
+.section p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* 会社概要リストのスタイル  */
+.list-all {
+    margin-top: 0px;
+}
+
+.list-all dl {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+}
+
+.list-all dd {
+    margin-left: 10px;
+    font-size: 0.8rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.list-all dd a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 35px;
+    background: linear-gradient(90deg, rgb(243, 212, 135) 10%, rgb(229, 214, 102) 28%, rgb(255, 211, 108) 69%, rgb(248, 240, 173) 100%);
+}
+
+.list-all a:hover {
+    text-decoration: underline;
+}
+
+/* Google Map のスタイル  */
+.top-2-inner-2 iframe {
+    border: none;
+    width: 100%;
+    height: 700px;
+    border-radius: 10px;
+}
 
 
 }
